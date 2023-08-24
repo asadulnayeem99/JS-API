@@ -5,5 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Api Fun</title>
   </head>
-  <body></body>
+  <body>
+    <h2 id="activity"></h2>
+    <script>
+      function doSOmething() {
+        fetch("http://www.boredapi.com/api/activity/")
+          .then((res) => res.json())
+          .then((data) => {
+            document.getElementById("activity").innerHTML = data.activity;
+          });
+      }
+      setInterval(() => {
+        doSOmething();
+      }, 2000);
+    </script>
+  </body>
 </html>
