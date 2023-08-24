@@ -83,7 +83,7 @@
             const gender = document.getElementById("gender");
             gender.innerText = capitalizeFirstLetter(user.gender);
 
-            console.log(user.gender[0].toUpperCase() + user.gender[0].slice(0));
+           // console.log(user.gender[0].toUpperCase() + user.gender[0].slice(0));
             function capitalizeFirstLetter(word) {
               return word.charAt(0).toUpperCase() + word.slice(1);
             }
@@ -92,10 +92,9 @@
             const usrname = document.getElementById("name");
             usrname.innerHTML = fullName;
             const bsImg = document.getElementById("img");
-            console.log(user);
+            
 
             bsImg.src = pic.large;
-
             bsImg.innerHTML = finalPic;
           });
       }
